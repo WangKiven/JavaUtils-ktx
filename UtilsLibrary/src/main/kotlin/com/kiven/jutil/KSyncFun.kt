@@ -18,7 +18,7 @@ object KSyncFun {
     }
 
     @Synchronized
-    private fun run0(method:()->Unit) {
+    fun run0(method:()->Unit) {
         method()
     }
 
