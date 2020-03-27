@@ -3,6 +3,7 @@ package com.kiven.jutil
 import java.io.UnsupportedEncodingException
 import java.net.MalformedURLException
 import java.net.URLDecoder
+import java.net.URLEncoder
 
 /**
  * Created by oukobayashi on 2020/3/13.
@@ -11,7 +12,7 @@ object KUrlUtil {
     @Throws(MalformedURLException::class)
     fun decode(var0: String): String {
         return try {
-            decode(var0, "8859_1")
+            decode(var0, "UTF-8")
         } catch (var2: UnsupportedEncodingException) {
             throw MalformedURLException("ISO-Latin-1 decoder unavailable")
         }
@@ -30,7 +31,7 @@ object KUrlUtil {
 
     @Throws(UnsupportedEncodingException::class)
     fun encode(var0: String, var1: String?): String {
-        val var2 = var0.toByteArray(charset(var1!!))
+        /*val var2 = var0.toByteArray(charset(var1!!))
         val var3 = var2.size
         val var5 = CharArray(3 * var3)
         var var6 = 0
@@ -46,6 +47,9 @@ object KUrlUtil {
                 var5[var6++] = var2[var7].toChar()
             }
         }
-        return String(var5, 0, var6)
+        return String(var5, 0, var6)*/
+        return if (var1 == null) {
+            URLEncoder.encode(var0)
+        } else URLEncoder.encode(var0, var1)
     }
 }
