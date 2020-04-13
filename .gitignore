@@ -1,3 +1,6 @@
 .gradle/
 UtilsLibrary/build/
 UtilsLibrary/out/
+SpringUtilsLibrary/build/
+SpringUtilsLibrary/out/
+.idea
