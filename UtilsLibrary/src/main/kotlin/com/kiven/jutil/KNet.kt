@@ -67,7 +67,7 @@ object KNet {
             val result = String(datas.toByteArray())
 
             return if (isError) {
-                Result(responseCode, "响应异常，异常码 = $responseCode, 错误信息：$result", "")
+                Result(responseCode, if (result.isBlank()) "响应异常" else result, "")
             } else Result(200, "", result)
         } catch (e: Throwable) {
 //            return Result(10086, e.message ?: "不明错误", "")
