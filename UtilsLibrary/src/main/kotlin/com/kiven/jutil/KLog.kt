@@ -64,7 +64,7 @@ object KLog {
                 // 这两个报了异常
 //                .append(", 内存池的使用阈值:${toG(it.usageThreshold)}")
 //                .append(", 超过使用阈值的次数:${toG(it.usageThresholdCount)}")
-                .append(", 已使用：${toG(it.usage.used)}")
+                .append(", 已使用：${toG(it.usage.used)}G")
         }
 
         val mmbs = ManagementFactory.getMemoryManagerMXBeans()
