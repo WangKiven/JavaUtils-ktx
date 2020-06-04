@@ -30,7 +30,7 @@ object KUrlUtil {
     }
 
     @Throws(UnsupportedEncodingException::class)
-    fun encode(var0: String, var1: String?): String {
+    fun encode(var0: String, var1: String? = "UTF-8"): String {
 
         // UriUtils.encode(message.argument, "UTF-8") //UriUtils.encode是spring提供的方法
         return if (var1 == null) {
