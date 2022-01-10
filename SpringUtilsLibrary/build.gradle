@@ -3,20 +3,21 @@ apply plugin: "org.jetbrains.kotlin.jvm"
 group 'com.kiven'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = parent.sourceCompatibility
-targetCompatibility = parent.targetCompatibility
-compileKotlin {
-    kotlinOptions.jvmTarget = parent.jvmTarget
-}
+//sourceCompatibility = parent.sourceCompatibility
+//targetCompatibility = parent.targetCompatibility
+//compileKotlin {
+//    kotlinOptions.jvmTarget = parent.jvmTarget
+//}
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation("org.springframework.boot:spring-boot-starter-web:${parent.springVersion}")
 }
 
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
+//compileKotlin {
+//    kotlinOptions.jvmTarget = "1.8"
+//}
+//compileTestKotlin {
+//    kotlinOptions.jvmTarget = "1.8"
+//}

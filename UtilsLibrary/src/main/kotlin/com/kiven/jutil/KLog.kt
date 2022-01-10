@@ -17,7 +17,7 @@ object KLog {
     fun printDeviceInfo() {
         val builder = StringBuilder()
 
-        builder.append("\n\ncup核数：").append(Runtime.getRuntime().availableProcessors())
+        builder.append("\n\ncpu核数：").append(Runtime.getRuntime().availableProcessors())
         builder.append("\n程序启动时间：")
             .append(DateFormat.getDateTimeInstance().format(Date(ManagementFactory.getRuntimeMXBean().startTime)))
 
