@@ -5,7 +5,7 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 import java.net.URLEncoder
-import javax.servlet.http.HttpServletResponse
+import jakarta.servlet.http.HttpServletResponse
 import kotlin.math.max
 
 object ControllerUtil {
